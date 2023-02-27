@@ -59,17 +59,19 @@ public class HashTables {
             return false;
         }
         //System.out.println(index);
-        table.add(index, value);
+        table.set(index, value);
         return true;
     }
 
     //get hashes the key to get the index, and returns that element. Returns null if key not found.
     public String get(String key){
         int index = hash(key);
-        System.out.println(index);
         if (table.get(index).equals("")){
             return null;
         }
+
+
+//        System.out.println("key = " + key + "value = " + table.get(index));
         return table.get(index);
     }
 
