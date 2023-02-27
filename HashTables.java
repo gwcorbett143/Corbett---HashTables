@@ -46,7 +46,13 @@ public class HashTables {
 
     //put hashes the key to an index in your array, and places the value there. Fails if there are collisions/repeat keys.
     public boolean put(String key, String value){
-
+        for(Listing e : table[hashCode(key)]){
+            if(e.getKey().equals(key)){
+                return false;
+            }
+        }
+        table[hashCode(key)].add(new Listing(key, value));
+        return true;
     }
 
     //get hashes the key to get the index, and returns that element. Returns null if key not found.
