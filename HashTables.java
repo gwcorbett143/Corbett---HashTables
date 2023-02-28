@@ -55,7 +55,6 @@ public class HashTables {
     public boolean put(String key, String value){
         int index = hash(key);
         if(!table.get(index).equals("")){
-            System.out.println("not adding in");
             return false;
         }
         //System.out.println(index);
