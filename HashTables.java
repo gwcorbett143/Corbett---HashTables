@@ -1,7 +1,6 @@
 package Hashtables;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HashTables {
 
